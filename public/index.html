@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok to MP4 変換器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 TikTok to MP4 変換器</h1>
+            <p>TikTokの動画URLを入力してMP4形式でダウンロードしよう！</p>
+        </header>
+
+        <main>
+            <div class="converter-box">
+                <form id="convertForm">
+                    <div class="input-group">
+                        <input 
+                            type="url" 
+                            id="tiktokUrl" 
+                            placeholder="TikTokの動画URLを貼り付けてください..." 
+                            required
+                        >
+                        <button type="submit" id="convertBtn">
+                            <span class="btn-text">変換開始</span>
+                            <span class="btn-loading" style="display: none;">
+                                <div class="spinner"></div>
+                                変換中...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+
+                <div id="result" class="result-section" style="display: none;">
+                    <div class="success-message">
+                        <h3>✅ 変換完了！</h3>
+                        <div class="video-info">
+                            <p><strong>タイトル:</strong> <span id="videoTitle"></span></p>
+                            <p><strong>作成者:</strong> <span id="videoAuthor"></span></p>
+                            <p><strong>画質:</strong> <span id="videoQuality"></span></p>
+                            <p><strong>ファイル名:</strong> <span id="fileName"></span></p>
+                        </div>
+                        <div class="download-actions">
+                            <a id="downloadLink" class="download-btn" download>
+                                📥 MP4をダウンロード
+                            </a>
+                            <button id="newConversion" class="new-btn">
+                                🔄 新しい変換
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="error" class="error-section" style="display: none;">
+                    <div class="error-message">
+                        <h3>❌ エラーが発生しました</h3>
+                        <p id="errorText"></p>
+                        <button id="tryAgain" class="retry-btn">
+                            🔄 再試行
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>📋 使用方法</h3>
+                <ol>
+                    <li>TikTokアプリまたはWebサイトで動画を開く</li>
+                    <li>「共有」ボタンをタップして「リンクをコピー」を選択</li>
+                    <li>上記の入力欄にURLを貼り付け</li>
+                    <li>「変換開始」ボタンをクリック</li>
+                    <li>変換完了後、MP4ファイルをダウンロード</li>
+                </ol>
+
+                <div class="features">
+                    <h4>✨ 特徴</h4>
+                    <ul>
+                        <li>高品質なMP4形式で保存</li>
+                        <li>ウォーターマークなしでダウンロード</li>
+                        <li>自動的にファイル名を生成</li>
+                        <li>シンプルで使いやすいインターフェース</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 TikTok to MP4 変換器 - 個人利用のみ</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
